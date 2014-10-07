@@ -1,0 +1,37 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    background-color: #98d56e;
+    text-align: center;
+}
+footer.coral {
+    background-color: #ffc525;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover, footer a:focus, footer a:active {
+    color: inherit;
+}
+.small-text {
+  font-size: 12px;
+}

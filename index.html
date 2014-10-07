@@ -1,263 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" class="wf-museosans-n1-active wf-museosans-n3-active wf-museosans-n5-active wf-museosans-n7-active wf-active">
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Polyglot, fault tolerant, balanced and full featured HTTP client for distributed and reactive systems">
-    <!--<link rel="shortcut icon" href="/images/favicon.png">-->
-    <title>Consul</title>
+    <meta name="description" content="Poliglot, fault tolerant, balance and configurable HTTP client for distributed and reactive systems">
+    <meta name="keywords" content="http, protocol, resilient, reactive, elastic, distributed, balanced, balancer">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Resilient</title>
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-    <script src="/scripts/font.js"></script>
-    <script>
-    try {
-      Typekit.load();
-    } catch (e) {}
-    </script>
+    <link href="/styles/custom.css" rel="stylesheet">
+    <link href="/styles/main.css" rel="stylesheet" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <![endif]-->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
 </head>
-<body class="page-home layout-">
-    <div id="header" class="navbar-static-top">
+
+<body>
+    <div class="navbar navbar-default navbar-static-top">
         <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand logo" href="./Consul_files/Consul.html">
-                    <span></span>
-                </a>
+            <div>
+                <h1><a class="navbar-brand navbar-logo navbar-left" href="/">Resilient</a></h1>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="buttons nav navbar-nav navbar-right rls-sb">
-                    <li class="first download outline-btn"><a href="http://www.consul.io/downloads.html">Download</a>
-                    </li>
-                    <li class="github outline-btn"><a href="https://github.com/hashicorp/consul">Github</a>
-                    </li>
-                </ul>
-                <ul class="main-links nav navbar-nav navbar-right rls-sb">
-                    <li class="first li-under"><a href="http://www.consul.io/intro/index.html">Intro</a>
-                    </li>
-                    <li class="li-under"><a href="http://www.consul.io/docs/index.html">Docs</a>
-                    </li>
-                    <li class="li-under"><a href="http://www.consul.io/community.html">Community</a>
-                    </li>
-                    <li class="li-under"><a href="http://demo.consul.io/">Demo</a>
-                    </li>
-                </ul>
-            </nav>
+            <div>
+            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http/spec">Documentation</a>
+            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http">Github</a>
         </div>
     </div>
-    <div id="jumbotron-mask">
-        <div id="jumbotron" style="-webkit-transform: translate(0px, 2284.8px);">
-            <div class="container" style="-webkit-transform: translate(0px, -571.2px);">
-                <div class="col-lg-6 col-md-6">
-                    <h2 class="rls-l">Service discovery and configuration made easy. Distributed, highly available, and datacenter-aware.</h2>
-                </div>
-                <div class="jumbo-logo-wrap col-lg-offset-1 col-lg-5 col-md-6 hidden-xs hidden-sm">
-                    <div class="jumbo-logo"></div>
-                </div>
-            </div>
-            <div class="jumbotron-dots"></div>
-        </div>
-    </div>
-    <div id="features">
-        <div class="container">
-            <div class="row double-row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5">
-                            <span class="icn discovery"></span>
-                        </div>
-                        <div class="col-lg-7 col-md-7">
-                            <h2>Service Discovery</h2>
-                            <p>Consul makes it simple for services to register themselves and to discover other services via a DNS or HTTP interface. Register external services such as SaaS providers as well.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5">
-                            <span class="icn health"></span>
-                        </div>
-                        <div class="col-lg-7 col-md-7">
-                            <h2>Failure Detection</h2>
-                            <p>Pairing service discovery with health checking prevents routing requests to unhealthy hosts and enables services to easily provide circuit breakers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row double-row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5">
-                            <span class="icn multi"></span>
-                        </div>
-                        <div class="col-lg-7 col-md-7">
-                            <h2>Multi Datacenter</h2>
-                            <p>Consul scales to multiple datacenters out of the box with no complicated configuration. Look up services in other datacenters, or keep the request local.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5">
-                            <span class="icn config"></span>
-                        </div>
-                        <div class="col-lg-7 col-md-7">
-                            <h2>Key/Value Storage</h2>
-                            <p>Flexible key/value store for dynamic configuration, feature flagging, coordination, leader election and more. Long poll for near-instant notification of configuration changes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="demos">
-        <div class="container">
-            <div class="terminals row">
-                <div class="col-xs-12 col-lg-12 explantion">
-                    <h2>DNS Query Interface</h2>
-                    <p>Look up services using Consul's built-in DNS server. Support existing infrastructure without any code change.</p>
-                </div>
-                <div class="terminal-item col-xs-12 col-lg-12">
-                    <div class="terminal">
-                        <header>
-                            <h4>Terminal</h4>
-                            <ul class="shell-dots">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </header>
-                        <div class="terminal-window">
-                            <div class="terminal">
-                                <div class="display">
-                                    <p class="command">
-                                        <span class="txt-r">admin@hashicorp</span>: dig web-frontend.service.consul. ANY</p>
-                                    <p>; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; web-frontend.service.consul. ANY</p>
-                                    <p>;; global options: +cmd</p>
-                                    <p></p>
-                                    <p>;; Got answer:</p>
-                                    <p>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 29981</p>
-                                    <p>;; flags: qr aa rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0</p>
-                                    <p></p>
-                                    <p>;; QUESTION SECTION:</p>
-                                    <p>;web-frontend.service.consul. IN ANY</p>
-                                    <p></p>
-                                    <p>;; ANSWER SECTION:</p>
-                                    <p>web-frontend.service.consul. 0 IN A
-                                        <span class="txt-p">10.0.3.83</span>
-                                    </p>
-                                    <p>web-frontend.service.consul. 0 IN A
-                                        <span class="txt-p">10.0.1.109</span>
-                                    </p>
-                                    <p class="command">
-                                        <span class="txt-r">admin@hashicorp</span>:
-                                        <span class="cursor">&nbsp;</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-lg-12 explantion">
-                    <h2>Key Value Storage</h2>
-                    <p>Consul provides a hierarchical key/value store with a simple HTTP API. Managing configuration has never been simpler.</p>
-                </div>
-                <div class="terminal-item col-xs-12 col-lg-12">
-                    <div class="terminal">
-                        <header>
-                            <h4>Terminal</h4>
-                            <ul class="shell-dots">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </header>
-                        <div class="terminal-window">
-                            <div class="terminal">
-                                <div class="display">
-                                    <p class="command">
-                                        <span class="txt-r">admin@hashicorp</span>: curl -X PUT -d 'bar' http://localhost:8500/v1/kv/foo</p>
-                                    <p>true</p>
-                                    <p class="command">
-                                        <span class="txt-r">admin@hashicorp</span>: curl http://localhost:8500/v1/kv/foo</p>
-                                    <p>[</p>
-                                    <p>{</p>
-                                    <p>"CreateIndex": 100,</p>
-                                    <p>"ModifyIndex": 200,</p>
-                                    <p>"Key": "foo",</p>
-                                    <p>"Flags": 0,</p>
-                                    <p>"Value":
-                                        <span class="txt-p">"YmFy"</span>
-                                    </p>
-                                    <p>}</p>
-                                    <p>]</p>
-                                    <p class="command">
-                                        <span class="txt-r">admin@hashicorp</span>:
-                                        <span class="cursor">&nbsp;</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="cta">
+    <div class="jumbotron">
         <div class="container">
             <div class="row">
-                <div class="intro">
-                    <div class="left col-xs-12 col-sm-offset-2 col-sm-4">
-                        <p>The intro and getting started guide contain a simple and approachable walkthrough for running Consul locally.</p>
-                    </div>
-                    <div class="col-xs-offset-5 col-xs-12 col-sm-6 col-sm-offset-0 right"> <a class="outline-btn purple" href="http://www.consul.io/intro/index.html">Read the intro »</a> 
+                <div class="col-lg-12">
+                    <div class="jumbotron-content" style="opacity: 1;">
+                        <h1 style="top: 1px;">Polyglot, fault tolerant, balanced full featured HTTP client for distributed and reactive systems</h1>
+                        <p class="lead">
+                            The system stays responsive in the face of failure.
+                            Resilience is achieved by replication, containment, isolation and delegation.
+                            The client of a component is not burdened with handling its failures
+                            <span class="small-text">(<a href="http://reactivemanifiesto.org">Reactive manifiesto</a>)</span>
+                        </p>
+                        <p>
+                            <a class="btn btn-custom btn-lg" href="#how-it-works" role="button">See hot it works</a>
+                            <span class="invite-me-cta">or <a href="#languages">see the supported languages</a>
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer">
+    <div id="about">
         <div class="container">
-            <div class="footer-links">
-                <ul class="main-links nav navbar-nav rls-sb">
-                    <li class="li-under"><a href="http://www.consul.io/intro/index.html">Intro</a>
-                    </li>
-                    <li class="active li-under"><a href="http://www.consul.io/docs/index.html">Docs</a>
-                    </li>
-                    <li class="li-under"><a href="http://www.consul.io/community.html">Community</a>
-                    </li>
-                    <li class="li-under"><a href="http://demo.consul.io/">Demo</a>
-                    </li>
-                </ul>
-                <ul class="buttons nav navbar-nav rls-sb">
-                    <li class="first download outline-btn purple"><a href="http://www.consul.io/downloads.html">Download</a>
-                    </li>
-                    <li class="github outline-btn purple"><a href="https://github.com/hashicorp/consul">Github</a>
-                    </li>
-                </ul>
+            <h2 class="headline">Introduction</h2>
+            <p class="lead lead-custom">Organisations working in disparate domains are independently discovering patterns
+for building software that look the same.
+These systems are more robust, more resilient, more flexible and better positioned to meet modern demands.
+</p>
+
+<p class="lead lead-custom">The system stays responsive in the face of failure.
+This applies not only to highly-available, mission critical systems — any system that is not resilient will be unresponsive after a failure</p>
+
+            <h2 class="headline">What resilient means?</h2>
+            <p class="lead lead-custom">
+                Acording to the <a href="http://reactivemanifiesto.org">reactive manifiesto</a>, Resilience is achieved by replication, containment, isolation and delegation. </p>
+            <p class="lead lead-custom">
+Failures are contained within each component, isolating components from each other
+and thereby ensuring that parts of the system can fail and recover without
+compromising the system as a whole. Recovery of each component is delegated to another (external)
+component and high-availability is ensured by replication where necessary.
+The client of a component is not burdened with handling its failures
+            </p>            
+
+            <h2 class="headline">A client-side balancer?</h2>
+            <p class="lead lead-custom">
+                <b>Resilient</b> aims to delegate the balancing logic responsabilities from the client-side, providing another an extra layer of reliability from the consumer
+            </p>
+            <p class="lead lead-custom">
+                Web applications evolved notably in the latest years, achieving and delegating new responsabilities in the client side.
+                The Web (and therefore HTTP) is based on a client-server architecture
+            </p>
+
+            <h2 class="headline">How it works?</h2>
+            <p class="lead lead-custom"></p>
+            <div class="features row">
+                <div class="col-sm-4 feature feature-one" style="opacity: 1;"><i class="fa fa-mobile"></i>
+                    <h4>Mobile responsive</h4>
+                    <hr>
+                    <p>Etiam ultrices magna in nibh dapibus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-sm-4 feature feature-two" style="opacity: 1;"><i class="fa fa-pencil"></i>
+                    <h4>Easy to customize</h4>
+                    <hr>
+                    <p>Aliquam non magna dignissim, gravida ipsum id, hendrerit odio. Mauris consequat congue mi, at lacinia ligula tristique vitae.</p>
+                </div>
+                <div class="col-sm-4 feature feature-three" style="opacity: 1;"><i class="fa fa-money"></i>
+                    <h4>Saves you time &amp; money</h4>
+                    <hr>
+                    <p>Fusce luctus venenatis erat non hendrerit. Nam gravida orci in libero faucibus malesuada.</p>
+                </div>
             </div>
-            <div class="footer-logo">
-                <span></span>
-            </div>
-            <div class="footer-hashi os">
-                <span>MIT license - <a href="https://github.com/resilient-http/">Resilient</a> Project</span>
-                <a class="hashi-logo" href="http://www.hashicorp.com/">
-                    <img src="./images/footer-logo.png">
-                </a>
+
+            <h3 class="headline">Algorithm</h3>
+            <p class="lead lead-custom">An algorithm worth more than words<p>
+
+            <p class="lead lead-custom">The following algorithm diagram represents from high-level the complete HTTP request flow in Resilient</p>
+            <a href="/images/algorithm.svg"><img src="/images/algorithm.svg" width="900" /></a>
+        </div>
+    </div>
+    <div class="testimonial-wrap">
+        <div class="container">
+            <h2 class="headline">Languages</h2>
+            <div class="row">
+                <div class="col-sm-6 testimonial">
+                    <div class="quote">
+                        <p></p>
+                    </div>
+                    <div class="cite">
+                        <img src="images/richard.jpg" alt="Avatar" class="photo">
+                        <p>JavaScript</p>
+                        <p>Person, some Company</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 testimonial">
+                    <div class="quote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+                    </div>
+                    <div class="cite">
+                        <img src="images/sarah.png" alt="Avatar" class="photo">
+                        <p>Sara Doe</p>
+                        <p>Person, some Company</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./scripts/jquery-2.0.3.min.js"></script>
-    <script src="./scripts/bootstrap.min.js"></script>
-    <script src="./scripts/site.js"></script>
-    <script>
-    APP.initialize();
-    </script>
+    <!--
+    <div id="invite-me" class="container">
+        <h2 class="headline">We’re glad you are about to join 6,502 other smart people who have joined us this week</h2>
+        <p class="lead lead-custom">Praesent interdum erat id suscipit hendrerit. Aenean scelerisque erat purus, id vulputate arcu aliquam ut. Duis pretium ut dolor a placerat.</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-signup">
+                    <div class="panel-body">
+                        <h5>Leave your name &amp; email and we'll send you an invite:</h5>
+                        <form class="form-inline" role="form">
+                            <div class="form-group">
+                                <label class="sr-only" for="nameField">First name</label>
+                                <input type="text" class="form-control input-lg" id="nameField" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="emailField">Email address</label>
+                                <input type="email" class="form-control input-lg" id="emailField" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-custom btn-lg">Invite me</button>
+                        </form>
+                        <p>*We will never share, rent, or sell your email address to anyone, ever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img class="footer-logo" src="/images/logo.png" alt="logo">
+                </div>
+                <div class="col-sm-6 col-sm-offset-1 col-md-offset-1">
+                    <ul class="link-list" class="pull-right">
+                        <li class="heading"></li>
+                        <li>
+                            <p class="pull-right">Brought to you with caffeine, passion and good music |
+                            <a href="https://github.com/resilient-http" class="pull-right"><i class="fa fa-lg"></i> Github</a></p>
+                        </li>
+                        <li>
+                            <p class="pull-right">© 2014 Resilient project contributors</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/jquery.localScroll.min.js"></script>
+    <script src="/scripts/jquery.scrollTo.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/custom.js"></script>
 </body>
 
 </html>
