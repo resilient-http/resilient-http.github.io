@@ -55,7 +55,7 @@ body, p {
     border-width: 0;
     margin-bottom: 0;
     padding-top: 67px;
-    padding-bottom: 15px
+    padding-bottom: 0px
 }
 .navbar-logo {
     width: 60px;
@@ -241,7 +241,7 @@ body, p {
 }
 .footer {
     background-color: #fafafa;
-    margin-top: 150px;
+    margin-top: 0px;
     padding-top: 40px;
     padding-bottom: 45px;
     border-top: 1px solid #e3e3e3;

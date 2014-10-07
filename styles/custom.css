@@ -9,7 +9,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding-bottom: 4rem;
+    padding-bottom: 0px;
     min-height: 100%;
 }
 footer {
