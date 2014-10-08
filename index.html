@@ -27,7 +27,8 @@
                 <h1><a class="navbar-brand navbar-logo navbar-left" href="/">Resilient</a></h1>
             </div>
             <div>
-            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http/spec">Documentation</a>
+            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http/spec">Specification</a>
+            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="#implementations">Clients</a>
             <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http">Github</a>
         </div>
     </div>
@@ -38,14 +39,14 @@
                     <div class="jumbotron-content" style="opacity: 1;">
                         <h1 style="top: 1px;">A fault tolerant, dynamic server discovering, balanced and full featured HTTP client for distributed and reactive systems</h1>
                         <p class="lead">
-                            Smart HTTP client for the new age of reactive services architectures.
-                            Be fault tolerant. Be reliable. Be responsive. Be elastic.
-                            The client of a system should not be burdened with handling its failures
-                            <span class="small-text">(<a href="http://reactivemanifiesto.org">Reactive manifiesto</a>)</span>
+                            The client of a system should not be burdened with handling its failures.
+                            It should be reliable, responsive, elastic and fault tolerant. 
+                            Resilient is the smart HTTP client for the new era of reactive systems architectures.
                         </p>
                         <p>
-                            <a class="btn btn-custom btn-lg" href="#how-it-works" role="button">See hot it works</a>
-                            <span class="invite-me-cta">or <a href="#languages">see the supported languages</a>
+                            <a class="btn btn-custom btn-lg" href="#how-it-works" role="button">See how it works</a>
+                            <span class="invite-me-cta">or <a href="#implementations">see the implementations</a></span>
+                            <span class="invite-me-cta">and <a href="#servers">compatible servers</a>
                             </span>
                         </p>
                     </div>
@@ -66,26 +67,28 @@ This applies not only to highly-available, mission critical systems — any syst
 
             <h2 class="headline">What resilient means?</h2>
             <p class="lead lead-custom">
-                Acording to the <a href="http://reactivemanifiesto.org">reactive manifiesto</a>, Resilience is achieved by replication, containment, isolation and delegation. </p>
+                Acording to the <a href="http://reactivemanifiesto.org">reactive manifiesto</a>, Resilience is achieved by replication, containment, isolation and delegation. 
+                Failures are contained within each component, isolating components from each other
+                and thereby ensuring that parts of the system can fail and recover without
+                compromising the system as a whole.
+            </p>
             <p class="lead lead-custom">
-Failures are contained within each component, isolating components from each other
-and thereby ensuring that parts of the system can fail and recover without
-compromising the system as a whole. Recovery of each component is delegated to another (external)
-component and high-availability is ensured by replication where necessary.
-The client of a component is not burdened with handling its failures
+                Recovery of each component is delegated to another (external)
+                component and high-availability is ensured by replication where necessary.
+                The client of a service is not burdened with handling its failures
             </p>            
 
             <h2 class="headline">A client-side balancer?</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> aims to delegate the balancing logic responsabilities from the client-side, providing another an extra layer of reliability from the consumer
+                <b>Resilient</b> aims to delegate the balancing logic responsabilities in a proper and consistent way in the client-side, providing another an extra layer of reliability from the consumer point-of-view.
             </p>
             <p class="lead lead-custom">
-                Web applications evolved notably in the latest years, achieving and delegating new responsabilities in the client side.
-                The Web (and therefore HTTP) is based on a client-server architecture
+                Web applications was evolved notably during latest years (specially Web), assuming new responsabilities on the client side. When running distributed microservices, there is convenient to handle with it
             </p>
 
             <h2 class="headline">How it works?</h2>
             <p class="lead lead-custom"></p>
+            <!--
             <div class="features row">
                 <div class="col-sm-4 feature feature-one" style="opacity: 1;"><i class="fa fa-mobile"></i>
                     <h4>Mobile responsive</h4>
@@ -103,59 +106,42 @@ The client of a component is not burdened with handling its failures
                     <p>Fusce luctus venenatis erat non hendrerit. Nam gravida orci in libero faucibus malesuada.</p>
                 </div>
             </div>
-
-            <h3 class="headline">Algorithm</h3>
-            <p class="lead lead-custom">An algorithm worth more than words<p>
-
-            <p class="lead lead-custom">The following algorithm diagram represents from high-level the complete HTTP request flow in Resilient</p>
+            -->
+            <h3 class="headline">The request flow algorithm</h3>
+            <!--<p class="lead lead-custom">An algorithm worth more than words<p>-->
+            <p class="lead lead-custom">The following algorithm diagram represents from high-level point of view the complete HTTP request livecycle flow and logic inside Resilient</p>
             <a href="/images/algorithm.svg"><img src="/images/algorithm.svg" width="900" /></a>
         </div>
     </div>
     <div class="testimonial-wrap">
         <div class="container">
-            <h2 class="headline">Languages</h2>
+            <h2 class="headline" id="implementations">Implementations</h2>
             <div class="row">
                 <div class="col-sm-6 testimonial">
                     <div class="quote">
-                        <p></p>
-                    </div>
-                    <div class="cite">
-                        <img src="images/richard.jpg" alt="Avatar" class="photo">
-                        <p>JavaScript</p>
+                        <h3><a href="https://github.com/resilient-http/resilient.js">JavaScript</a></h3>
                         <p>Node.js, Browsers</p>
-                        <p><i>beta</i></p>
+                        <p><i>npm install resilient</i> | <i>bower install resilient</i></p>
                     </div>
+                    <!--<div class="cite"></div>-->
                 </div>
             </div>
         </div>
     </div>
-    <!--
+    
     <div id="invite-me" class="container">
-        <h2 class="headline">We’re glad you are about to join 6,502 other smart people who have joined us this week</h2>
-        <p class="lead lead-custom">Praesent interdum erat id suscipit hendrerit. Aenean scelerisque erat purus, id vulputate arcu aliquam ut. Duis pretium ut dolor a placerat.</p>
+        <h2 class="headline">Servers</h2>
+        <p class="lead lead-custom">A list of compatible servers with the Resilient interface specification</p>
         <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-signup">
-                    <div class="panel-body">
-                        <h5>Leave your name &amp; email and we'll send you an invite:</h5>
-                        <form class="form-inline" role="form">
-                            <div class="form-group">
-                                <label class="sr-only" for="nameField">First name</label>
-                                <input type="text" class="form-control input-lg" id="nameField" placeholder="First name">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="emailField">Email address</label>
-                                <input type="email" class="form-control input-lg" id="emailField" placeholder="Enter email">
-                            </div>
-                            <button type="submit" class="btn btn-custom btn-lg">Invite me</button>
-                        </form>
-                        <p>*We will never share, rent, or sell your email address to anyone, ever.</p>
-                    </div>
+            <div class="col-lg-12 testimonial">
+                <div class="quote">
+                    <h3><a href="http://innotech.github.io/hydra/">Hydra</a></h3>
+                    <p>Go</p>
                 </div>
             </div>
         </div>
     </div>
-    -->
+    
     <div class="footer">
         <div class="container">
             <div class="row">
