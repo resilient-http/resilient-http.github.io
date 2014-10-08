@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>Resilient</title>
-    <link href="/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles/normalize.css" rel="stylesheet">
     <link href="/styles/custom.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet" media="screen">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -28,7 +29,7 @@
             </div>
             <div>
             <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http/spec">Specification</a>
-            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="#implementations">Clients</a>
+            <a class="btn navbar-btn navbar-btn-custom navbar-right" href="#clients">Clients</a>
             <a class="btn navbar-btn navbar-btn-custom navbar-right" href="https://github.com/resilient-http">Github</a>
         </div>
     </div>
@@ -45,7 +46,7 @@
                         </p>
                         <p>
                             <a class="btn btn-custom btn-lg" href="#introduction" role="button">Learn how it works</a>
-                            <span class="invite-me-cta">or <a href="#implementations">see the clients</a></span>
+                            <span class="invite-me-cta">or <a href="#clients">see the clients</a></span>
                             <span class="invite-me-cta">and <a href="#servers">compatible servers</a>
                             </span>
                         </p>
@@ -100,42 +101,52 @@ This applies not only to highly-available, mission critical systems — any syst
 
             <h2 class="headline">Polyglot</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> project wanna to become a polyglot HTTP client in a future. 
+                <b>Resilient</b> project want to become a multilenguage HTTP client.
                 There are plan to support port it into multiple languages such as Python, Ruby, Go, Clojure... in a future, after the client specification have more madurity
             </p>
 
             <h2 class="headline">How it works?</h2>
             <h3 class="headline">The request flow algorithm</h3>
-            <!--<p class="lead lead-custom">An algorithm worth more than words<p>-->
-            <p class="lead lead-custom">The following algorithm diagram represents from high-level point of view the complete HTTP request livecycle flow and logic inside Resilient</p>
+            
+            <p class="lead lead-custom">The following algorithm diagram represents (from a high-level point of view) the complete HTTP request livecycle flow and logic encapsulated inside Resilient</p>
 
-            <p class="lead lead-custom">For more information, see the <a href="https://github.com/resilient-http/spec">draft specification</a> for both client and server interface</p>
+            <p class="lead lead-custom">For more information, see the <a href="https://github.com/resilient-http/spec">draft specification</a> for both client and server interfaces</p>
             <a href="/images/algorithm.svg"><img src="/images/algorithm.svg" width="900" /></a>
         </div>
     </div>
-    <div class="testimonial-wrap">
+
+    <div class="testimonial-wrap" id="clients">
         <div class="container">
-            <h2 class="headline" id="implementations">Clients</h2>
+            <h2 class="headline">Clients</h2>
+            <!--<p class="lead lead-custom">A list of Resilient multilanguage clients</p>-->
             <div class="row">
                 <div class="col-sm-6 testimonial">
                     <div class="quote">
                         <h3><a href="https://github.com/resilient-http/resilient.js">JavaScript</a></h3>
-                        <p>Node.js, Browser</p>
-                        <p><i>npm install resilient</i> | <i>bower install resilient</i></p>
+                        <p>Full featured HTTP for both node.js and browsers (ES5 compliant)</p>
+                        <!--<br />
+                        <p>
+                            <span class="label label-info">npm install resilient</span> 
+                            <span class="label label-info">bower install resilient</span>
+                        </p>
+                        -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div id="invite-me" class="container">
-        <h2 class="headline" id="servers">Discovery servers</h2>
-        <p class="lead lead-custom">A list of compatible discovery servers</p>
-        <div class="row">
-            <div class="col-lg-12 testimonial">
-                <div class="quote">
-                    <h3><a href="http://innotech.github.io/hydra/">Hydra</a></h3>
-                    <p><a href="http://innotech.github.io/hydra/HydraDesignv3/HydraDesignv3.html">Documentation</a></p>
+    <div class="servers-wrap" id="servers">
+        <div id="" class="container">
+            <h2 class="headline">Discovery servers</h2>
+            <!--<p class="lead lead-custom">A list of compatible discovery servers</p>-->
+            <div class="row">
+                <div class="col-lg-6 testimonial">
+                    <div class="quote">
+                        <h3><a href="http://innotech.github.io/hydra/">Hydra</a></h3>
+                        <p>Multi-cloud application discovery, management and balancing service.
+                        See the <a href="http://innotech.github.io/hydra/HydraDesignv3/HydraDesignv3.html">documentation</a> for more information</p>
+                    </div>
                 </div>
             </div>
         </div>
