@@ -44,8 +44,8 @@
                             Resilient is the smart HTTP client for the new era of reactive systems architectures.
                         </p>
                         <p>
-                            <a class="btn btn-custom btn-lg" href="#how-it-works" role="button">See how it works</a>
-                            <span class="invite-me-cta">or <a href="#implementations">see the implementations</a></span>
+                            <a class="btn btn-custom btn-lg" href="#introduction" role="button">Learn how it works</a>
+                            <span class="invite-me-cta">or <a href="#implementations">see the clients</a></span>
                             <span class="invite-me-cta">and <a href="#servers">compatible servers</a>
                             </span>
                         </p>
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div id="about">
-        <div class="container">
+        <div class="container" id="introduction">
             <h2 class="headline">Introduction</h2>
             <p class="lead lead-custom">Organisations working in disparate domains are independently discovering patterns
 for building software that look the same.
@@ -65,7 +65,7 @@ These systems are more robust, more resilient, more flexible and better position
 <p class="lead lead-custom">The system stays responsive in the face of failure.
 This applies not only to highly-available, mission critical systems — any system that is not resilient will be unresponsive after a failure</p>
 
-            <h2 class="headline">What resilient means?</h2>
+            <h2 class="headline">What resilient specifically means?</h2>
             <p class="lead lead-custom">
                 Acording to the <a href="http://reactivemanifiesto.org">reactive manifiesto</a>, Resilience is achieved by replication, containment, isolation and delegation. 
                 Failures are contained within each component, isolating components from each other
@@ -78,65 +78,64 @@ This applies not only to highly-available, mission critical systems — any syst
                 The client of a service is not burdened with handling its failures
             </p>            
 
-            <h2 class="headline">A client-side balancer?</h2>
+            <h2 class="headline">Be much responsible as possible</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> aims to delegate the balancing logic responsabilities in a proper and consistent way in the client-side, providing another an extra layer of reliability from the consumer point-of-view.
+                <b>Resilient</b> controls the request control flow in a transversal way 
+                in order to guarantee the most successfull 
+                consistency in your HTTP traffic, with exceptional handling for errors 
+                and fallbacking to the next best available server
             </p>
+
+            <h2 class="headline">Server discovering and caching</h2>
             <p class="lead lead-custom">
-                Web applications was evolved notably during latest years (specially Web), assuming new responsabilities on the client side. When running distributed microservices, there is convenient to handle with it
+                <b>Resilient</b> has built-in support for dynamic servers discovering, refreshing and caching.
+                You could provide a list of servers which provides to Resilient a list of available service servers.
+                Discovery servers must implements the Resilient interface <a href="https://github.com/resilient-http/spec">specification</a>
+            </p>
+
+            <h2 class="headline">Client side balancing</h2>
+            <p class="lead lead-custom">
+                <b>Resilient</b> aims to delegate the balancing logic responsabilities in a proper and consistent way on the client-side, providing another an extra layer of reliability from the consumer side, taking into account latency, networks errors, server errors, round robin... in order to priorize the best available server
+            </p>
+
+            <h2 class="headline">Polyglot</h2>
+            <p class="lead lead-custom">
+                <b>Resilient</b> project wanna to become a polyglot HTTP client in a future. 
+                There are plan to support port it into multiple languages such as Python, Ruby, Go, Clojure... in a future, after the client specification have more madurity
             </p>
 
             <h2 class="headline">How it works?</h2>
-            <p class="lead lead-custom"></p>
-            <!--
-            <div class="features row">
-                <div class="col-sm-4 feature feature-one" style="opacity: 1;"><i class="fa fa-mobile"></i>
-                    <h4>Mobile responsive</h4>
-                    <hr>
-                    <p>Etiam ultrices magna in nibh dapibus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="col-sm-4 feature feature-two" style="opacity: 1;"><i class="fa fa-pencil"></i>
-                    <h4>Easy to customize</h4>
-                    <hr>
-                    <p>Aliquam non magna dignissim, gravida ipsum id, hendrerit odio. Mauris consequat congue mi, at lacinia ligula tristique vitae.</p>
-                </div>
-                <div class="col-sm-4 feature feature-three" style="opacity: 1;"><i class="fa fa-money"></i>
-                    <h4>Saves you time &amp; money</h4>
-                    <hr>
-                    <p>Fusce luctus venenatis erat non hendrerit. Nam gravida orci in libero faucibus malesuada.</p>
-                </div>
-            </div>
-            -->
             <h3 class="headline">The request flow algorithm</h3>
             <!--<p class="lead lead-custom">An algorithm worth more than words<p>-->
             <p class="lead lead-custom">The following algorithm diagram represents from high-level point of view the complete HTTP request livecycle flow and logic inside Resilient</p>
+
+            <p class="lead lead-custom">For more information, see the <a href="https://github.com/resilient-http/spec">draft specification</a> for both client and server interface</p>
             <a href="/images/algorithm.svg"><img src="/images/algorithm.svg" width="900" /></a>
         </div>
     </div>
     <div class="testimonial-wrap">
         <div class="container">
-            <h2 class="headline" id="implementations">Implementations</h2>
+            <h2 class="headline" id="implementations">Clients</h2>
             <div class="row">
                 <div class="col-sm-6 testimonial">
                     <div class="quote">
                         <h3><a href="https://github.com/resilient-http/resilient.js">JavaScript</a></h3>
-                        <p>Node.js, Browsers</p>
+                        <p>Node.js, Browser</p>
                         <p><i>npm install resilient</i> | <i>bower install resilient</i></p>
                     </div>
-                    <!--<div class="cite"></div>-->
                 </div>
             </div>
         </div>
     </div>
     
     <div id="invite-me" class="container">
-        <h2 class="headline">Servers</h2>
-        <p class="lead lead-custom">A list of compatible servers with the Resilient interface specification</p>
+        <h2 class="headline" id="servers">Discovery servers</h2>
+        <p class="lead lead-custom">A list of compatible discovery servers</p>
         <div class="row">
             <div class="col-lg-12 testimonial">
                 <div class="quote">
                     <h3><a href="http://innotech.github.io/hydra/">Hydra</a></h3>
-                    <p>Go</p>
+                    <p><a href="http://innotech.github.io/hydra/HydraDesignv3/HydraDesignv3.html">Documentation</a></p>
                 </div>
             </div>
         </div>
