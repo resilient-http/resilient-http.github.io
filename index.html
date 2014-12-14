@@ -94,7 +94,11 @@
 
             <h2 class="headline">Client side balancing</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> aims to delegate the balancing logic responsabilities in a proper and consistent way on the client-side, providing an extra layer of reliability from the consumer side, taking into account network latency, networks errors, server errors, load distribution... in order to use the best available server
+                <b>Resilient</b> aims to delegate the balancing logic responsabilities 
+                in a proper and consistent way on the client-side, providing an extra layer of reliability 
+                from the consumer side, taking into account network latency, networks errors and server errors 
+                in order to determinate the best available server. It also supports a 
+                a round robin scheduler for better load distribution 
             </p>
 
             <h2 class="headline">Polyglot</h2>
@@ -105,11 +109,6 @@
 
             <h2 class="headline">How does it work?</h2>
             
-            <!--
-            <h3 class="headline">A representative use case scenario</h3>            
-            <a href="/images/scenario.png"><img src="/images/scenario.png" width="900" /></a>
-            -->
-
             <h3 class="headline">The request flow algorithm</h3>
             
             <p class="lead lead-custom">The following algorithm diagram represents (from a high-level point of view) the complete HTTP request livecycle flow and logic encapsulated inside Resilient</p>
