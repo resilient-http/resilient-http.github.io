@@ -87,39 +87,42 @@
 
             <h2 class="headline">Be as much responsible as possible</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> controls the request control flow in a transversal way 
-                in order to guarantee the most successful
-                consistency in your HTTP traffic, with exceptional handling for errors 
-                and fallbacking to the next best available server
+                <b>Resilient</b> takes the HTTP request control flow live-cycle in a transversal way 
+                from the start until the end in order to guarantee the most successful
+                consistency in your HTTP traffic, with proper handling for errors 
+                and failover to the next best available server, if required.
             </p>
 
             <h2 class="headline">Server discovering and caching</h2>
             <p class="lead lead-custom">
                 <b>Resilient</b> has built-in support for dynamic servers discovering, refreshing and caching.
-                You could provide a list of servers which gives to Resilient a list of available service servers.
+                You could provide a list of servers which gives to Resilient a list of available service end servers.
                 Discovery servers must implement the Resilient interface <a href="https://github.com/resilient-http/spec">specification</a>
+                or should be supported via middleware.
             </p>
 
             <h2 class="headline">Client side balancing</h2>
             <p class="lead lead-custom">
                 <b>Resilient</b> aims to delegate the balancing logic responsabilities 
                 in a proper and consistent way on the client-side, providing an extra layer of reliability 
-                from the consumer side, taking into account network latency, networks errors and server errors 
-                in order to determinate the best available server. It also supports
-                a round robin scheduler for better load distribution across a pool of servers
+                from the consumer side, taking into account multiple parameters such as network latency, network errors and server errors 
+                in order to determinate the best available server every time. It also has build-in support
+                for round robin scheduler in order to provide better load distribution across a pool of servers
             </p>
-
+    
+            <!--
             <h2 class="headline">Polyglot</h2>
             <p class="lead lead-custom">
                 <b>Resilient</b> wants to become a multi-language HTTP client.
                 There are plans to port the JavaScript client implementation to multiple languages such as Python, Ruby, Go, Clojure... in a near future, after the client specification have more madurity
             </p>
-
+            -->
+            
             <h2 class="headline">How does it work?</h2>
             
             <h3 class="headline">The request flow algorithm</h3>
             
-            <p class="lead lead-custom">The following algorithm diagram represents (from a high-level point of view) the complete HTTP request livecycle flow and logic encapsulated inside Resilient</p>
+            <p class="lead lead-custom">The following algorithm diagram represents (from a high-level point of view) the complete HTTP request livecycle flow and logic encapsulated inside a Resilient client</p>
 
             <p class="lead lead-custom">For more information, see the <a href="https://github.com/resilient-http/spec">draft specification</a> for both client and server interfaces</p>
 
