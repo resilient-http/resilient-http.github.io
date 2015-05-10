@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="jumbotron-content" style="opacity: 1;">
-                        <h1 style="top: 1px;">A smart HTTP client with super powers like fault tolerance, dynamic server discovery, auto balancing and reactive recovery, designed for distributed systems</h1>
+                        <h1 style="top: 1px;">A smart HTTP client with super powers like fault tolerance, dynamic server lookup, auto balancing and reactive recovery, designed for distributed systems</h1>
                         <p class="lead">
                             The client of a system should not be burdened with handling its failures.
                             It should be reliable, responsive, elastic and fault tolerant. 
@@ -98,7 +98,7 @@
             <p class="lead lead-custom">
                 <b>Resilient</b> has built-in support for dynamic servers discovering, refreshing and caching.
                 You could provide a list of servers which gives to Resilient a list of available service end servers.
-                Discovery servers must implement the Resilient interface <a href="https://github.com/resilient-http/spec">specification</a>
+                Lookup servers must implement the Resilient interface <a href="https://github.com/resilient-http/spec">specification</a>
                 or should be supported via middleware.
             </p>
 
@@ -146,19 +146,19 @@
     </div>
     <div class="servers-wrap" id="servers">
         <div id="" class="container">
-            <h2 class="headline">Discovery Servers</h2>
+            <h2 class="headline">Lookup Servers</h2>
             <div class="row">
                 <div class="col-lg-6 testimonial">
                     <div class="quote">
                         <h3><a href="https://consul.io/">Consul</a></h3>
-                        <p>Service discovery and configuration made easy. Distributed, highly available, and datacenter-aware.
+                        <p>Service lookup and configuration made easy. Distributed, highly available, and datacenter-aware.
                         (via <a href="https://github.com/h2non/resilient-consul">middleware</a>)</p>
                     </div>
                 </div>
                 <div class="col-lg-6 testimonial">
                     <div class="quote">
                         <h3><a href="https://github.com/h2non/resilient-server/">Resilient Server</a></h3>
-                        <p>Dummy HTTP server fully compatible with the Resilient discovery protocol for testing/development</p>
+                        <p>Dummy HTTP server fully compatible with the Resilient lookup protocol for testing/development</p>
                     </div>
                 </div>
             </div>
