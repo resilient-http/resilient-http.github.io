@@ -86,29 +86,35 @@
                 The client of a service is not burdened with handling its failures
             </p>            
 
-            <h2 class="headline">Be as much responsible as possible</h2>
+            <h2 class="headline">About</h2>
             <p class="lead lead-custom">
                 <b>Resilient</b> takes the HTTP request control flow live-cycle in a transversal way 
-                from the start until the end in order to guarantee the most successful
-                consistency in your HTTP traffic, with proper handling for errors 
-                and failover to the next best available server, if required.
+                to guarantee end-to-end communication is performed successfully and 
+                consistently between different HTTP nodes. 
+                It will fallback and retry the request in case of failure, handling errors and status properly 
+                and doing failover to the next best available server if required.
             </p>
 
-            <h2 class="headline">Server discovering and caching</h2>
+            <h2 class="headline">Server discovering</h2>
             <p class="lead lead-custom">
-                <b>Resilient</b> has built-in support for dynamic servers discovering, refreshing and caching.
-                You could provide a list of servers which gives to Resilient a list of available service end servers.
-                Lookup servers must implement the Resilient interface <a href="https://github.com/resilient-http/spec">specification</a>
-                or should be supported via middleware.
+                <b>Resilient</b> has built-in support for dynamic servers discovering, self refreshing and optional caching.
+                You could provide a list of servers which gives to the Resilient client a list of available URLs of your servers.
             </p>
 
             <h2 class="headline">Client-side based balancing</h2>
             <p class="lead lead-custom">
                 <b>Resilient</b> aims to delegate the balancing logic responsabilities 
                 in a proper and consistent way on the client-side, providing an extra layer of reliability 
-                from the consumer side, taking into account multiple parameters such as network latency, network errors and server errors 
-                in order to determinate the best available server every time. It also has build-in support
+                from the consumer side. It also has build-in support
                 for round robin scheduler in order to provide better load distribution across a pool of servers
+            </p>
+
+            <h2 class="headline">Effective emphirical communication</h2>
+            <p class="lead lead-custom">
+                <b>Resilient</b> clients store multiple parameters such as network latency, network errors and server errors 
+                in order to determinate which is the potentially best available server on every request based 
+                on emphirical information of previous communications.
+                This can increase in some scenarios the efficiency of the HTTP client when communicating with multiple backends.
             </p>
     
             <!--
